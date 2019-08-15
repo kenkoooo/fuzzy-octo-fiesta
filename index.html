@@ -4400,12 +4400,7 @@ var author$project$Main$experienceBlock = F2(
 						]))
 				]));
 	});
-var elm$html$Html$h2 = _VirtualDom_node('h2');
-var elm$virtual_dom$VirtualDom$node = function (tag) {
-	return _VirtualDom_node(
-		_VirtualDom_noScript(tag));
-};
-var elm$html$Html$node = elm$virtual_dom$VirtualDom$node;
+var elm$html$Html$a = _VirtualDom_node('a');
 var elm$json$Json$Encode$string = _Json_wrap;
 var elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -4420,6 +4415,31 @@ var elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
+var author$project$Main$softwareBlock = F2(
+	function (name, link) {
+		return A2(
+			elm$html$Html$h5,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$a,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$href(link)
+						]),
+					_List_fromArray(
+						[
+							elm$html$Html$text(name)
+						]))
+				]));
+	});
+var elm$html$Html$h2 = _VirtualDom_node('h2');
+var elm$virtual_dom$VirtualDom$node = function (tag) {
+	return _VirtualDom_node(
+		_VirtualDom_noScript(tag));
+};
+var elm$html$Html$node = elm$virtual_dom$VirtualDom$node;
 var elm$html$Html$Attributes$rel = _VirtualDom_attribute('rel');
 var rundis$elm_bootstrap$Bootstrap$CDN$stylesheet = A3(
 	elm$html$Html$node,
@@ -5409,6 +5429,27 @@ var author$project$Main$main = A2(
 							_List_Nil,
 							_List_fromArray(
 								[
+									elm$html$Html$text('Software')
+								])),
+							A2(author$project$Main$softwareBlock, 'AtCoder Problems', 'https://kenkoooo.com/atcoder/'),
+							A2(author$project$Main$softwareBlock, 'Competitive Programming Snippets in Rust', 'https://github.com/kenkoooo/competitive-programming-rs')
+						]))
+				])),
+			A2(
+			rundis$elm_bootstrap$Bootstrap$Grid$row,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					rundis$elm_bootstrap$Bootstrap$Grid$col,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$h2,
+							_List_Nil,
+							_List_fromArray(
+								[
 									elm$html$Html$text('Experience')
 								])),
 							A2(author$project$Main$experienceBlock, 'Software Engineer at Indeed', 'Mar 2019 -'),
@@ -5432,7 +5473,7 @@ var author$project$Main$main = A2(
 							_List_Nil,
 							_List_fromArray(
 								[
-									elm$html$Html$text('Educaton')
+									elm$html$Html$text('Education')
 								])),
 							A2(author$project$Main$experienceBlock, 'Bachelar of Science, University of Tokyo', 'Apr 2010 - Mar 2014')
 						]))

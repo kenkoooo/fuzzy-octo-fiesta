@@ -2,7 +2,8 @@ module Main exposing (main)
 
 import Bootstrap.CDN as CDN
 import Bootstrap.Grid as Grid
-import Html exposing (..)
+import Html exposing (Html, a, div, h2, h5, p, text)
+import Html.Attributes exposing (href)
 
 
 main =
@@ -16,6 +17,13 @@ main =
             ]
         , Grid.row []
             [ Grid.col []
+                [ h2 [] [ text "Software" ]
+                , softwareBlock "AtCoder Problems" "https://kenkoooo.com/atcoder/"
+                , softwareBlock "Competitive Programming Snippets in Rust" "https://github.com/kenkoooo/competitive-programming-rs"
+                ]
+            ]
+        , Grid.row []
+            [ Grid.col []
                 [ h2 [] [ text "Experience" ]
                 , experienceBlock "Software Engineer at Indeed" "Mar 2019 -"
                 , experienceBlock "Software Engineer at SoundHound Inc." "Dec 2017 - Feb 2019"
@@ -25,11 +33,16 @@ main =
             ]
         , Grid.row []
             [ Grid.col []
-                [ h2 [] [ text "Educaton" ]
+                [ h2 [] [ text "Education" ]
                 , experienceBlock "Bachelar of Science, University of Tokyo" "Apr 2010 - Mar 2014"
                 ]
             ]
         ]
+
+
+softwareBlock : String -> String -> Html msg
+softwareBlock name link =
+    h5 [] [ a [ href link ] [ text name ] ]
 
 
 experienceBlock : String -> String -> Html msg
